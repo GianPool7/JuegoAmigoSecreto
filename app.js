@@ -4,6 +4,10 @@
 
 let listadoAmigo=[];
 
+// listado para guardar los elegidos del random
+
+let listadoAmigoEscojido=[]
+
 
 
 
@@ -28,8 +32,17 @@ function agregarAmigo() {
 
 
 function sortearAmigo() {
+
+
+    
     let elegido = document.getElementById("resultado").innerHTML=listadoAmigo[Math.floor(Math.random()*listadoAmigo.length)]
-    console.log(elegido);
+    listadoAmigoEscojido.push(elegido)
+
+    if (listadoAmigoEscojido.includes(elegido)) {
+        alert(`${elegido}`)
+    }
+
+
 }
 
 
