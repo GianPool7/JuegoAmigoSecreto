@@ -22,20 +22,37 @@
             <h2 class="alertaMensaje" id="mensajeAmigo"></h2>
             <div class="input-wrapper">
                 <input type="text" id="amigo" class="input-name" placeholder="Escribe un nombre">
-                <button class="button-add" onclick="agregarAmigo()">Añadir</button>
+                <button id="agregar" class="button-add" onclick="agregarAmigo()">Añadir</button>
             </div>
            
             <ul id="listaAmigos" class="name-list" aria-labelledby="listaAmigos" role="list"></ul>
             <ul id="resultado" class="result-list" aria-live="polite"></ul>
 
-            <p id="mensaje"></p>
+            <div class="button-container" id="btn_caja_empezar">
+                <button class="empezar-juego " id="" onclick="empezarJuego()" aria-label="Sortear amigo secreto">
+                    Empezar Juego
+                </button>
+            </div>
 
             <div class="button-container">
-                <button class="button-draw" onclick="sortearAmigo()" aria-label="Sortear amigo secreto">
+                <button class="button-draw" id="btnSortear" onclick="sortearAmigo()" aria-label="Sortear amigo secreto">
                     <img src="assets/play_circle_outline.png" alt="Ícono para sortear">
                     Sortear amigo
                 </button>
             </div>
+
+            <div class="button-container">
+                <button class="reiniciar-juego" id="reiniciar" onclick="reiniciarJuego()" aria-label="Sortear amigo secreto">
+                    Reiniciar el juego
+                </button>
+            </div>
+
+            <div class="button-container">
+                <button class="continuar-agregando" id="continuarAgregando" onclick="continuarAgregando()" aria-label="Sortear amigo secreto">
+                    continuar agregando
+                </button>
+            </div>
+
         </section>
     </main>
 

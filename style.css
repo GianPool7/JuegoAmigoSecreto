@@ -7,6 +7,9 @@
     --color-text: #444444;
     --color-white: #FFFFFF;
     --color-alerta: red;
+    --color-go: green;
+    --color-reiniciar: blue;
+    --color-agregar:yellow;
 }
 
 /* Estilos generales */
@@ -153,8 +156,45 @@ ul {
 }
 
 /* Botón de sortear título */
-.button-draw {
+
+.empezar-juego {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 40px;
+    color: var(--color-white);
+    background-color: var(--color-go);
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+.reiniciar-juego{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 40px;
+    color: var(--color-white);
+    background-color: var(--color-reiniciar);
+    font-size: 16px;
+    margin-top: 40px;
+}
+
+.continuar-agregando{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 40px;
+    color: var(--color-text);
+    background-color: var(--color-agregar);
+    font-size: 16px;
+    margin-top: 40px;
+}
+
+.button-draw {
+    display: none;
     align-items: center;
     width: 100%;
     padding: 10px 40px;
@@ -162,6 +202,7 @@ ul {
     background-color: var(--color-button);
     font-size: 16px;
 }
+
 
 .button-draw img {
     margin-right: 40px;
