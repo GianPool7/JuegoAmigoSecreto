@@ -8,22 +8,26 @@ let listadoAmigo=[];
 
 let listadoAmigoEscojido=[]
 
-// 
-let elegido=""
 
 
 function agregarAmigo() {
     
-    let nombreAmigo = document.getElementById("amigo").value;
+    let nombreAmigo = document.getElementById("amigo");
+    let alerta=document.getElementById("mensajeAmigo")
 
-    if (nombreAmigo==="") {
-        alert("El campo tiene que estar lleno")
+    if (nombreAmigo.value==="") {
+        alerta.innerHTML="El campo tiene que estar lleno";
+        nombreAmigo.focus();
     }else{
-        if (listadoAmigo.includes(nombreAmigo)) {
-            alert("es nombre ya esta perro");
+        if (listadoAmigo.includes(nombreAmigo.value)) {
+            alerta.innerHTML="Es nombre ya esta perro";
+            nombreAmigo.value="";
+            nombreAmigo.focus();
         } else {
-            listadoAmigo.push(nombreAmigo);
+            listadoAmigo.push(nombreAmigo.value);
             console.log(listadoAmigo);
+            nombreAmigo.value="";
+            nombreAmigo.focus();
         }
     }
 
@@ -33,24 +37,18 @@ function agregarAmigo() {
 
 
 function sortearAmigo() {
-    
-    generarNombreAleatorio();
-    
-    if (listadoAmigoEscojido.includes(elegido)) {
-        //alert("no se puede")
-        
+
+    let amigoElegido=document.getElementById("resultado")
+    amigoElegido=listadoAmigoEscojido[Math.floor(Math.random()*listadoAmigo.length)]
+
+    if (listadoAmigoEscojido.includes(amigoElegido)) {
+        alert("el elegido ya esta")
     }else{
-        listadoAmigoEscojido.push(elegido);
-        console.log(listadoAmigoEscojido);
+        alert("el elegido ya se agrego")
+        listadoAmigoEscojido.push(amigoElegido)
     }
 
-}
-
-function generarNombreAleatorio() {
-    let elegido = (document.getElementById("resultado").innerHTML=listadoAmigo[Math.floor(Math.random() * listadoAmigo.length)]);
+    console.log(listadoAmigo);
 
 }
-
-
-
 

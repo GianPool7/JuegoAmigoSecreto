@@ -6,6 +6,7 @@
     --color-button-hover: #e55720;
     --color-text: #444444;
     --color-white: #FFFFFF;
+    --color-alerta: red;
 }
 
 /* Estilos generales */
@@ -66,6 +67,15 @@ body {
     font-size: 36px;
     font-weight: 700;
     color: var(--color-primary);
+    margin: 10px 0;
+    text-align: center;
+}
+
+.alertaMensaje {
+    font-family: "Inter", serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--color-alerta);
     margin: 10px 0;
     text-align: center;
 }
