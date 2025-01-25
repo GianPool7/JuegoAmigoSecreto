@@ -8,7 +8,8 @@ let listadoAmigo=[];
 
 let listadoAmigoEscojido=[]
 
-
+// 
+let elegido=""
 
 
 function agregarAmigo() {
@@ -32,20 +33,23 @@ function agregarAmigo() {
 
 
 function sortearAmigo() {
-
-
     
-    let elegido = document.getElementById("resultado").innerHTML=listadoAmigo[Math.floor(Math.random()*listadoAmigo.length)]
-    listadoAmigoEscojido.push(elegido)
-
+    generarNombreAleatorio();
+    
     if (listadoAmigoEscojido.includes(elegido)) {
-        alert(`${elegido}`)
+        //alert("no se puede")
+        
+    }else{
+        listadoAmigoEscojido.push(elegido);
+        console.log(listadoAmigoEscojido);
     }
-
 
 }
 
+function generarNombreAleatorio() {
+    let elegido = (document.getElementById("resultado").innerHTML=listadoAmigo[Math.floor(Math.random() * listadoAmigo.length)]);
 
+}
 
 
 
