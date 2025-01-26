@@ -55,7 +55,7 @@ function agregarAmigo() {
         } else {
             limpiandoErrores();
             listadoAmigo.push(nombreAmigo.value);
-            console.log(listadoAmigo);
+            //console.log(listadoAmigo);
             nombreAmigo.value="";
             nombreAmigo.focus();
             btnGo.style.display="flex";
@@ -91,7 +91,7 @@ function aleatorio() {
   listadoAmigoEscojido.push(amigoElegido)
 
   resultadoNombre.innerHTML = amigoElegido;
-  console.log(listadoAmigoEscojido);
+  //console.log(listadoAmigoEscojido);
 }
 
 
